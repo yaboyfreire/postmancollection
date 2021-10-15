@@ -1,2 +1,0 @@
-# postmancollection
-stuff postman version
