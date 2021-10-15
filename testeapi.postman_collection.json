@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "6084a1ac-0109-4287-bd1b-d32651cbc5bd",
+		"name": "testeapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "francisco",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zedoprimodotio@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "tipoConta",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tiodoze",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.16.16.124:8001/api/register",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"124"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://172.16.16.124:8001/api/login?email=zedoprimodotio@gmail.com&password=tiodoze",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"124"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "zedoprimodotio@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "tiodoze"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xNzIuMTYuMTYuMTI0OjgwMDFcL2FwaVwvbG9naW4iLCJpYXQiOjE2MzM5NjYzNTQsImV4cCI6MTYzMzk2OTk1NCwibmJmIjoxNjMzOTY2MzU0LCJqdGkiOiJXQ1lZUlFsZkJIYkQxTk54Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nuLBQoS-4ydVfifra8zhN9vsrKho9S2XE1kd3pjoRVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.16.16.124:8001/api/profile",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"124"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallusers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xNzIuMTYuMTYuMTI0OjgwMDFcL2FwaVwvbG9naW4iLCJpYXQiOjE2MzM5NjYzNTQsImV4cCI6MTYzMzk2OTk1NCwibmJmIjoxNjMzOTY2MzU0LCJqdGkiOiJXQ1lZUlFsZkJIYkQxTk54Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nuLBQoS-4ydVfifra8zhN9vsrKho9S2XE1kd3pjoRVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.16.16.124:8001/api/users",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"124"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xNzIuMTYuMTYuMTI0OjgwMDFcL2FwaVwvbG9naW4iLCJpYXQiOjE2MzM5NjYzNTQsImV4cCI6MTYzMzk2OTk1NCwibmJmIjoxNjMzOTY2MzU0LCJqdGkiOiJXQ1lZUlFsZkJIYkQxTk54Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nuLBQoS-4ydVfifra8zhN9vsrKho9S2XE1kd3pjoRVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.16.16.124:8001/api/users/1",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"124"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
